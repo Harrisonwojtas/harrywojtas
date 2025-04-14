@@ -60,7 +60,7 @@
     function openLightbox(src) {
       const existing = document.getElementById('lightbox');
       if (existing) existing.remove();
-
+  
       const lightbox = document.createElement('div');
       lightbox.id = 'lightbox';
       lightbox.style.position = 'fixed';
@@ -74,16 +74,16 @@
       lightbox.style.justifyContent = 'center';
       lightbox.style.zIndex = '9999';
       lightbox.style.cursor = 'zoom-out';
-
+  
       const img = document.createElement('img');
       img.src = src;
       img.style.maxWidth = '90vw';
       img.style.maxHeight = '90vh';
       img.style.borderRadius = '10px';
       img.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.5)';
-
+  
       lightbox.addEventListener('click', () => lightbox.remove());
-
+  
       lightbox.appendChild(img);
       document.body.appendChild(lightbox);
     }
