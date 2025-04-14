@@ -1,0 +1,41 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Harry Wojtas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">About</a>
+    <a href="pottery.html">Pottery</a>
+    <a href="block-print.html">Block Print</a>
+    <a href="cv.html">CV</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h1>Contact Me</h1>
+    <p>If you’d like to reach out about my work or just say hello, please use the form below.</p>
+
+    <!-- Static contact form (not functional yet) -->
+    <form>
+      <label for="name">Name</label><br>
+      <input type="text" id="name" name="name" style="width: 100%;"><br><br>
+
+      <label for="email">Email</label><br>
+      <input type="email" id="email" name="email" style="width: 100%;"><br><br>
+
+      <label for="message">Message</label><br>
+      <textarea id="message" name="message" rows="6" style="width: 100%;"></textarea><br><br>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>Friends' websites: <a href="https://augustlamm.com/" target="_blank">August Lamm</a> | [Friend 2] | [Friend 3]</p>
+  </footer>
+</body>
+</html>
