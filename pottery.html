@@ -28,27 +28,38 @@
   <footer>
     <p>Friends' websites: [Friend 1] | [Friend 2] | [Friend 3]</p>
   </footer>
-
-<!-- Lightbox Script -->
-<script>
-  function openLightbox(src) {
-    const lightbox = document.createElement('div');
-    lightbox.style.position = 'fixed';
-    lightbox.style.top = '0';
-    lightbox.style.left = '0';
-    lightbox.style.width = '100vw';
-    lightbox.style.height = '100vh';
-    lightbox.style.backgroundColor = 'rgba(0,0,0,0.8)';
-    lightbox.style.display = 'flex';
-    lightbox.style.alignItems = 'center';
-    lightbox.style.justifyContent = 'center';
-    lightbox.style.zIndex = '9999';
-    lightbox.innerHTML = `<img src="${src}" style="max-width:90%; max-height:90%;">`;
-
-    lightbox.onclick = () => document.body.removeChild(lightbox);
-    document.body.appendChild(lightbox);
-  }
-</script>
+  <script>
+    function openLightbox(src) {
+      // Create overlay
+      const lightbox = document.createElement('div');
+      lightbox.style.position = 'fixed';
+      lightbox.style.top = '0';
+      lightbox.style.left = '0';
+      lightbox.style.width = '100vw';
+      lightbox.style.height = '100vh';
+      lightbox.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+      lightbox.style.display = 'flex';
+      lightbox.style.alignItems = 'center';
+      lightbox.style.justifyContent = 'center';
+      lightbox.style.zIndex = '1000';
+  
+      // Create image
+      const img = document.createElement('img');
+      img.src = src;
+      img.style.maxWidth = '90%';
+      img.style.maxHeight = '90%';
+      img.style.boxShadow = '0 0 20px rgba(0,0,0,0.5)';
+      img.style.borderRadius = '10px';
+  
+      // Close on click
+      lightbox.addEventListener('click', () => {
+        document.body.removeChild(lightbox);
+      });
+  
+      lightbox.appendChild(img);
+      document.body.appendChild(lightbox);
+    }
+  </script>
 
 </body>
 </html>
