@@ -45,3 +45,9 @@ img.gallery {
   padding: 4px;
   background: white;
 }
+
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
