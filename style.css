@@ -75,3 +75,26 @@ img {
 .gallery-img:hover {
   transform: scale(1.03);
 }
+/* To increase the size of the profile picture as well as make it wrap */
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.text-side {
+  flex: 1;
+}
+
+.image-side {
+  flex: 0 0 auto;
+}
+
+.profile-pic {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
