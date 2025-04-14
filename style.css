@@ -46,8 +46,32 @@ img.gallery {
   background: white;
 }
 
-
+/*Prevent images from being downloaded on users computer */
 img {
   pointer-events: none;
   user-select: none;
+}
+
+/* Container for gallery */
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+/* Individual image styles */
+.gallery-img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
 }
