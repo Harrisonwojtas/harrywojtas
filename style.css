@@ -64,8 +64,8 @@ img.gallery {
 
 /*Prevent images from being downloaded on users computer */
 img {
-  pointer-events: none;
   user-select: none;
+  pointer-events: none;
 }
 
 /* Container for gallery */
@@ -86,6 +86,8 @@ img {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   cursor: zoom-in;
   transition: transform 0.2s ease;
+  pointer-events: auto;
+
 }
 
 .gallery-img:hover {
@@ -106,7 +108,7 @@ img {
 }
 
 .about-image img {
-  max-width: 300px;
+  max-width: 350px;
   width: 100%;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
