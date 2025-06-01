@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pottery - Harry Wojtas</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .gallery-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 2rem;
+    }
+
+    .gallery-img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      cursor: zoom-in;
+      transition: transform 0.2s ease;
+      pointer-events: auto;
+
+    }
+
+    .gallery-img:hover {
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="site-title"><a href="index.html">Harry Wojtas</a></div>
+  <nav>
+    <a href="index.html">About</a>
+    <a href="pottery.html">Pottery</a>
+    <a href="block-print.html">Block Print</a>
+    
+    <div class="dropdown">
+    <button class="dropbtn">Photos ▾</button>
+  <div class="dropdown-content">
+    <a href="bigplaces.html">Grand Places</a>
+    <a href="peru.html">Peru</a>
+    <a href="birds.html">Birds</a> <!-- New page -->
+  </div>
+</div>
+
+  </div>
+
+  <a href="cv.html">CV</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+  <div class="container">
+    <h1>Grand Places</h1>
+    <p>World is big. On hikes, travels, walk abouts I capture some of these grand places.</p>
+
+    <div class="gallery-grid">
+      <img src="Images/ceramics/Bowl.JPG" alt="Pottery 1" class="gallery-img" onclick="openLightbox(this.src)" oncontextmenu="return false;">
+      
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Mountains</h1>
+    <p>Peaks mostly hike or seen in Sitka Alaska. </p>
+ 
+    <div class="gallery-grid">
+      <img src="Images/ceramics/2025/BeachMug.JPG" alt="2025 1" class="gallery-img" onclick="openLightbox(this.src)" oncontextmenu="return false;">
+   
+    </div>
+  </div>
+  <footer>
+    <p>Friends' websites: <a href="https://augustlamm.com/" target="_blank">August Lamm</a> | [Friend 2] | [Friend 3]</p>
+  </footer>
+
+  <!-- Lightbox script -->
+  <script>
+    function openLightbox(src) {
+      const existing = document.getElementById('lightbox');
+      if (existing) existing.remove();
+  
+      const lightbox = document.createElement('div');
+      lightbox.id = 'lightbox';
+      lightbox.style.position = 'fixed';
+      lightbox.style.top = '0';
+      lightbox.style.left = '0';
+      lightbox.style.width = '100vw';
+      lightbox.style.height = '100vh';
+      lightbox.style.background = 'rgba(0, 0, 0, 0.9)';
+      lightbox.style.display = 'flex';
+      lightbox.style.alignItems = 'center';
+      lightbox.style.justifyContent = 'center';
+      lightbox.style.zIndex = '9999';
+      lightbox.style.cursor = 'zoom-out';
+  
+      const img = document.createElement('img');
+      img.src = src;
+      img.style.maxWidth = '90vw';
+      img.style.maxHeight = '90vh';
+      img.style.borderRadius = '10px';
+      img.style.boxShadow = '0 0 20px rgba(0, 0, 0, 0.5)';
+  
+      lightbox.addEventListener('click', () => lightbox.remove());
+  
+      lightbox.appendChild(img);
+      document.body.appendChild(lightbox);
+    }
+  </script>
+</body>
+</html>
+
